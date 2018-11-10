@@ -1,0 +1,44 @@
+.map {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+
+.map-marker {
+  font-size: 35px;
+  color: #4b4fee;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.icon-bar {
+  position: absolute;
+  left: 15px;
+  top: 100px;
+  z-index: 99;
+}
+
+.icon-bar button {
+  background: rgba(75, 75, 75, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1em;
+  padding: 7.5px;
+  transition: 1s;
+}
+
+.icon-bar button:active {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.icon-bar button:focus {outline:0;}

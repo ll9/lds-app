@@ -1,7 +1,7 @@
 <template>
     <GridLayout rows="30, auto" marginBottom="5">
         <Label ref="label" row="1" :text="placeholder" opacity="0.4" fontSize="14"  class="input"></Label>
-        <TextField ref="textField" :secure="secure" row="1"  @focus="onFocus" @blur="onBlur" borderBottomWidth="3" borderBottomColor="#cec8c8" padding="2"></TextField>
+        <TextField ref="textField" @textChange="onInput" v-model="value" :secure="secure" row="1"  @focus="onFocus" @blur="onBlur" borderBottomWidth="3" borderBottomColor="#cec8c8" padding="2"></TextField>
     </GridLayout>
 </template>
 
@@ -9,13 +9,17 @@
 import Vue from "vue";
 import { Color } from "tns-core-modules/color";
 
-
 export default Vue.extend({
-  props: ["placeholder", "secure"],
+  props: ["value", "placeholder", "secure"],
   data() {
-    return {};
+    return {
+      value: this.value
+    };
   },
   methods: {
+    onInput() {
+      this.$emit("input", this.value);
+    },
     onFocus() {
       const label = this.$refs.label.nativeView;
       const textField = this.$refs.textField.nativeView;

@@ -3,8 +3,9 @@
         <SDActionBar></SDActionBar>
         <ScrollView>
           <StackLayout>
-              <FloatTextField placeholder="Lichtpunktnummer" secure></FloatTextField>
-              <FloatTextField placeholder="Ort" secure></FloatTextField>
+              <FloatTextField v-model="lichtpunktnummer" placeholder="Lichtpunktnummer" secure></FloatTextField>
+              <FloatTextField v-model="ort" placeholder="Ort" secure></FloatTextField>
+              <Label :text="ort" />
               <!-- <TextField v-model="lichtpunktnummer" hint="Lichtpunktnummer" />
               <TextField v-model="ort" hint="Ort" /> -->
               <TextField v-model="straße" hint="Straße" />

@@ -43,7 +43,6 @@ export default Vue.extend({
         webView,
         WWW_ROOT,
         coordinates => {
-          alert(coordinates);
           this.$navigateTo(DataPage, navigationOptions);
         }
       );

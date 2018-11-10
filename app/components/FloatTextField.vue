@@ -7,14 +7,18 @@
 
 <script>
 import Vue from "vue";
+import { Color } from "tns-core-modules/color";
+
 
 export default Vue.extend({
   props: ["placeholder", "secure"],
-  data() {},
+  data() {
+    return {};
+  },
   methods: {
     onFocus() {
-      const label = this.$refs.label.nativeElement;
-      const textField = this.$refs.textField.nativeElement;
+      const label = this.$refs.label.nativeView;
+      const textField = this.$refs.textField.nativeView;
 
       // animate the label sliding up and less transparent.
       label
@@ -28,8 +32,8 @@ export default Vue.extend({
       textField.borderBottomColor = new Color("#00b47e");
     },
     onBlur() {
-      const label = this.$refs.label.nativeElement;
-      const textField = this.$refs.textField.nativeElement;
+      const label = this.$refs.label.nativeView;
+      const textField = this.$refs.textField.nativeView;
 
       // if there is text in our input then don't move the label back to its initial position.
       if (!textField.text) {
@@ -45,3 +49,4 @@ export default Vue.extend({
     }
   }
 });
+</script>

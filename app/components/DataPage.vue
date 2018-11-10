@@ -1,10 +1,12 @@
 <template>
-    <Page class="page" @loaded="pageLoaded">
+    <Page class="page">
         <SDActionBar></SDActionBar>
         <ScrollView>
           <StackLayout>
-              <TextField v-model="lichtpunktnummer" hint="Lichtpunktnummer" />
-              <TextField v-model="ort" hint="Ort" />
+              <FloatTextField placeholder="Lichtpunktnummer" secure></FloatTextField>
+              <FloatTextField placeholder="Ort" secure></FloatTextField>
+              <!-- <TextField v-model="lichtpunktnummer" hint="Lichtpunktnummer" />
+              <TextField v-model="ort" hint="Ort" /> -->
               <TextField v-model="straße" hint="Straße" />
               <TextField v-model="hausnummer" hint="Hausnummer" />
               <TextField v-model="bemerkung" hint="Bemerkung" />
@@ -31,6 +33,7 @@
 <script>
 import Vue from "vue";
 import SDActionBar from "./SDActionBar";
+import FloatTextField from './FloatTextField';
 import FinalPage from "./FinalPage";
 import { navigationOptions } from "../utils/settings";
 import DateService from '../utils/DateService';
@@ -72,7 +75,8 @@ export default Vue.extend({
     }
   },
   components: {
-    SDActionBar
+    SDActionBar,
+    FloatTextField
   }
 });
 </script>

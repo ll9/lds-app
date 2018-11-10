@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@vue/devtools": "5.0.0-beta.3",
+    "nativescript-dom": "^2.0.2",
     "nativescript-drop-down": "^4.0.1",
     "nativescript-geolocation": "^4.3.1",
     "nativescript-modal-datetimepicker": "^1.1.10",

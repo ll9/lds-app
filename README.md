@@ -1,3 +1,18 @@
+# Install latest nativescript vue
+
+$ npm install -g @vue/cli @vue/cli-init
+$ npm install -g nativescript@next
+$ vue init nativescript-vue/vue-cli-template <project-name>
+$ cd <project-name>
+$
+$ npm install
+$ # or
+$ yarn install
+$
+$ tns run android --bundle
+$ # or
+$ tns run ios --bundle
+
 # NativeScript-Vue Application
 
 > A native application built with NativeScript-Vue

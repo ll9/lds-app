@@ -2,7 +2,7 @@
     <Page class="page">
         <SDActionBar></SDActionBar>
         <ScrollView>
-          <StackLayout>
+          <StackLayout class="container">
               <FloatTextField v-model="lichtpunktnummer" hint="Lichtpunktnummer"></FloatTextField>
               <FloatTextField v-model="ort" hint="Ort"></FloatTextField>
               <FloatTextField v-model="straße" hint="Straße" />

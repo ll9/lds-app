@@ -1,7 +1,7 @@
 <template>
     <Page class="page" @loaded="pageLoaded">
         <SDActionBar></SDActionBar>
-        <StackLayout>
+        <StackLayout class="container">
             <WebView id="webView"></WebView>
             <Button text="Weiter" @tap="navigateForward"></Button>
         </StackLayout>
@@ -33,7 +33,7 @@ export default Vue.extend({
   },
   methods: {
     pageLoaded(args) {
-      this.$showModal(LoginPage);
+      // this.$showModal(LoginPage);
       let page = args.object;
       let webView = page.getViewById("webView");
       if (webView.android) {

@@ -1,7 +1,7 @@
 <template>
     <Page class="page" @loaded="pageLoaded">
         <SDActionBar></SDActionBar>
-        <StackLayout>
+        <StackLayout class="container">
             <Button text="Abschicken"></Button>
         </StackLayout>
     </Page>

@@ -13,14 +13,14 @@
               <FloatTextField v-model="mastlänge" hint="Mastlänge" />
               <FloatTextField v-model="fundament" hint="Fundament" />
               <FloatTextField v-model="auslegertyp" hint="Auslegertyp" />
-              <DateTextField v-model="montagedatum" hint="Montagedatum" />
+              <DateTextField v-model="mastMontagedatum" hint="Montagedatum" />
               <FloatTextField v-model="leuchtentyp" hint="Leuchtentyp" />
-              <DateTextField v-model="montagedatum" hint="Montagedatum" />
+              <DateTextField v-model="leuchtenMontagedatum" hint="Montagedatum" />
               <FloatTextField v-model="lichtpunkthöhe" hint="Lichtpunkthöhe" keyboardType="number" />
               <FloatTextField v-model="lampentyp" hint="Lampentyp" />
-              <DateTextField v-model="montagedatum" hint="Montagedatum" />
+              <DateTextField v-model="lampenMontagedatum" hint="Montagedatum" />
               <FloatTextField v-model="material" hint="Material" />
-              <DateTextField v-model="montagedatum" hint="Montagedatum" />
+              <DateTextField v-model="materialMontagedatum" hint="Montagedatum" />
 
               <Button text="Weiter" @tap="navigateForward"></Button>
           </StackLayout>
@@ -52,14 +52,14 @@ export default Vue.extend({
       mastlänge: '',
       fundament: '',
       auslegertyp: '',
-      montagedatum: '',
+      mastMontagedatum: '',
       leuchtentyp: '',
-      montagedatum: '',
+      leuchtenMontagedatum: '',
       lichtpunkthöhe: '',
       lampentyp: '',
-      montagedatum: '',
+      lampenMontagedatum: '',
       material: '',
-      montagedatum: '',
+      materialMontagedatum: '',
     };
   },
   computed: {

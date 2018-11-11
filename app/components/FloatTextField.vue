@@ -1,7 +1,19 @@
 <template>
     <GridLayout rows="30, auto" marginBottom="5">
         <Label ref="label" row="1" :text="hint" opacity="0.4" fontSize="14"  class="input"></Label>
-        <TextField ref="textField" @textChange="onInput" v-model="value" :secure="secure" :keyboardType="keyboardType" row="1"  @focus="onFocus" @blur="onBlur" borderBottomWidth="3" borderBottomColor="#cec8c8" padding="2"></TextField>
+        <TextField ref="textField" 
+        v-model="val" 
+        :secure="secure" 
+        :keyboardType="keyboardType" 
+        :editable="editable"
+        @textChange="onInput" 
+        @focus="onFocus" 
+        @blur="onBlur" 
+        row="1"  
+        borderBottomWidth="3" 
+        borderBottomColor="#cec8c8" 
+        padding="2"
+        ></TextField>
     </GridLayout>
 </template>
 
@@ -10,10 +22,10 @@ import Vue from "vue";
 import { Color } from "tns-core-modules/color";
 
 export default Vue.extend({
-  props: ["value", "hint", "secure", "keyboardType"],
+  props: ["value", "hint", "secure", "keyboardType", "editable"],
   data() {
     return {
-      value: this.value
+      val: this.value
     };
   },
   methods: {
@@ -34,6 +46,7 @@ export default Vue.extend({
 
       // set the border bottom color to green to indicate focus
       textField.borderBottomColor = new Color("#00b47e");
+      this.$emit('focus')
     },
     onBlur() {
       const label = this.$refs.label.nativeView;

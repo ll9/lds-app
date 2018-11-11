@@ -16,14 +16,14 @@
               <TextField v-model="mastlänge" hint="Mastlänge" />
               <TextField v-model="fundament" hint="Fundament" />
               <TextField v-model="auslegertyp" hint="Auslegertyp" />
-              <TextField v-model="montagedatum" hint="Montagedatum" @focus="getDate" />
+              <DateTextField v-model="montagedatum" hint="Montagedatum" />
               <TextField v-model="leuchtentyp" hint="Leuchtentyp" />
-              <TextField v-model="montagedatum" hint="Montagedatum" @focus="getDate" />
+              <DateTextField v-model="montagedatum" hint="Montagedatum" />
               <TextField v-model="lichtpunkthöhe" hint="Lichtpunkthöhe" keyboardType="number" />
               <TextField v-model="lampentyp" hint="Lampentyp" />
-              <TextField v-model="montagedatum" hint="Montagedatum" @focus="getDate" />
+              <DateTextField v-model="montagedatum" hint="Montagedatum" />
               <TextField v-model="material" hint="Material" />
-              <TextField v-model="montagedatum" hint="Montagedatum" @focus="getDate" />
+              <DateTextField v-model="montagedatum" hint="Montagedatum" />
 
               <Button text="Weiter" @tap="navigateForward"></Button>
           </StackLayout>
@@ -35,6 +35,7 @@
 import Vue from "vue";
 import SDActionBar from "./SDActionBar";
 import FloatTextField from './FloatTextField';
+import DateTextField from './sub/DateTextField';
 import FinalPage from "./FinalPage";
 import { navigationOptions } from "../utils/settings";
 import DateService from '../utils/DateService';
@@ -77,7 +78,8 @@ export default Vue.extend({
   },
   components: {
     SDActionBar,
-    FloatTextField
+    FloatTextField,
+    DateTextField
   }
 });
 </script>

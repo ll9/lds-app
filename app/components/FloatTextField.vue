@@ -1,5 +1,5 @@
 <template>
-    <GridLayout rows="30, auto" marginBottom="5">
+    <GridLayout rows="20, auto" marginBottom="5">
         <Label ref="label" row="1" :text="hint" opacity="0.4" fontSize="14"  class="input"></Label>
         <TextField ref="textField" 
         v-model="value" 
@@ -36,7 +36,7 @@ export default Vue.extend({
       // animate the label sliding up and less transparent.
       label
         .animate({
-          translate: { x: 0, y: -25 },
+          translate: { x: 0, y: -20 },
           opacity: 1
         })
         .then(() => {}, () => {});

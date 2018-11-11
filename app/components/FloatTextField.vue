@@ -2,7 +2,7 @@
     <GridLayout rows="30, auto" marginBottom="5">
         <Label ref="label" row="1" :text="hint" opacity="0.4" fontSize="14"  class="input"></Label>
         <TextField ref="textField" 
-        v-model="value" 
+        v-model="text" 
         :secure="secure" 
         :keyboardType="keyboardType" 
         @textChange="onInput" 
@@ -23,11 +23,13 @@ import { Color } from "tns-core-modules/color";
 export default Vue.extend({
   props: ["value", "hint", "secure", "keyboardType", "editable"],
   data() {
-    return {};
+    return {
+      text: value
+    };
   },
   methods: {
     onInput() {
-      this.$emit("input", this.value);
+      this.$emit("input", this.text);
     },
     onFocus() {
       const label = this.$refs.label.nativeView;

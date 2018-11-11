@@ -1,5 +1,5 @@
 <template>
-    <FloatTextField v-model="value" :hint="hint" @focus="getDate"></FloatTextField>
+    <FloatTextField v-model="date" :hint="hint" @focus="getDate"></FloatTextField>
 </template>
 
 <script>
@@ -12,12 +12,14 @@ const Service = new DateService();
 export default Vue.extend({
   props: ["value", "hint"],
   data() {
-    return {};
+    return {
+      date: this.value
+    };
   },
   methods: {
     async getDate() {
-      this.value = await Service.getDate();
-      this.$emit("input", this.value);
+      this.date = await Service.getDate();
+      this.$emit("input", this.date);
     }
   },
   components: {

@@ -1,25 +1,23 @@
 <template>
-    <FloatTextField v-model="val" :hint="hint" @focus="getDate" editable="false"></FloatTextField>
+    <FloatTextField v-model="value" :hint="hint" @focus="getDate"></FloatTextField>
 </template>
 
 <script>
 import Vue from "vue";
 import DateService from "../../utils/DateService";
-import FloatTextField from '../FloatTextField';
+import FloatTextField from "../FloatTextField";
 
 const Service = new DateService();
 
 export default Vue.extend({
   props: ["value", "hint"],
   data() {
-    return {
-      val: this.value
-    }
+    return {};
   },
   methods: {
-    async getDate(args) {
-      this.val = await Service.getDate();
-      this.$emit('input', this.val);
+    async getDate() {
+      this.value = await Service.getDate();
+      this.$emit("input", this.value);
     }
   },
   components: {

@@ -5,9 +5,6 @@
           <StackLayout>
               <FloatTextField v-model="lichtpunktnummer" hint="Lichtpunktnummer"></FloatTextField>
               <FloatTextField v-model="ort" hint="Ort"></FloatTextField>
-              <Label :text="ort" />
-              <!-- <TextField v-model="lichtpunktnummer" hint="Lichtpunktnummer" />
-              <TextField v-model="ort" hint="Ort" /> -->
               <FloatTextField v-model="straße" hint="Straße" />
               <FloatTextField v-model="hausnummer" hint="Hausnummer" />
               <FloatTextField v-model="bemerkung" hint="Bemerkung" />

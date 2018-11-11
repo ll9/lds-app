@@ -1,5 +1,6 @@
 # Install latest nativescript vue
 
+```bash
 $ npm install -g @vue/cli @vue/cli-init
 $ npm install -g nativescript@next
 $ vue init nativescript-vue/vue-cli-template <project-name>
@@ -12,6 +13,7 @@ $
 $ tns run android --bundle
 $ # or
 $ tns run ios --bundle
+```
 
 # NativeScript-Vue Application
 

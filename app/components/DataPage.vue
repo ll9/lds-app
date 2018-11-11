@@ -3,26 +3,26 @@
         <SDActionBar></SDActionBar>
         <ScrollView>
           <StackLayout>
-              <FloatTextField v-model="lichtpunktnummer" placeholder="Lichtpunktnummer" secure></FloatTextField>
-              <FloatTextField v-model="ort" placeholder="Ort" secure></FloatTextField>
+              <FloatTextField v-model="lichtpunktnummer" hint="Lichtpunktnummer"></FloatTextField>
+              <FloatTextField v-model="ort" hint="Ort"></FloatTextField>
               <Label :text="ort" />
               <!-- <TextField v-model="lichtpunktnummer" hint="Lichtpunktnummer" />
               <TextField v-model="ort" hint="Ort" /> -->
-              <TextField v-model="straße" hint="Straße" />
-              <TextField v-model="hausnummer" hint="Hausnummer" />
-              <TextField v-model="bemerkung" hint="Bemerkung" />
-              <TextField v-model="schranknummer" hint="Schranknummer" />
-              <TextField v-model="masttyp" hint="Masttyp" />
-              <TextField v-model="mastlänge" hint="Mastlänge" />
-              <TextField v-model="fundament" hint="Fundament" />
-              <TextField v-model="auslegertyp" hint="Auslegertyp" />
+              <FloatTextField v-model="straße" hint="Straße" />
+              <FloatTextField v-model="hausnummer" hint="Hausnummer" />
+              <FloatTextField v-model="bemerkung" hint="Bemerkung" />
+              <FloatTextField v-model="schranknummer" hint="Schranknummer" />
+              <FloatTextField v-model="masttyp" hint="Masttyp" />
+              <FloatTextField v-model="mastlänge" hint="Mastlänge" />
+              <FloatTextField v-model="fundament" hint="Fundament" />
+              <FloatTextField v-model="auslegertyp" hint="Auslegertyp" />
               <DateTextField v-model="montagedatum" hint="Montagedatum" />
-              <TextField v-model="leuchtentyp" hint="Leuchtentyp" />
+              <FloatTextField v-model="leuchtentyp" hint="Leuchtentyp" />
               <DateTextField v-model="montagedatum" hint="Montagedatum" />
-              <TextField v-model="lichtpunkthöhe" hint="Lichtpunkthöhe" keyboardType="number" />
-              <TextField v-model="lampentyp" hint="Lampentyp" />
+              <FloatTextField v-model="lichtpunkthöhe" hint="Lichtpunkthöhe" keyboardType="number" />
+              <FloatTextField v-model="lampentyp" hint="Lampentyp" />
               <DateTextField v-model="montagedatum" hint="Montagedatum" />
-              <TextField v-model="material" hint="Material" />
+              <FloatTextField v-model="material" hint="Material" />
               <DateTextField v-model="montagedatum" hint="Montagedatum" />
 
               <Button text="Weiter" @tap="navigateForward"></Button>

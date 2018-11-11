@@ -1,7 +1,7 @@
 <template>
     <GridLayout rows="30, auto" marginBottom="5">
-        <Label ref="label" row="1" :text="placeholder" opacity="0.4" fontSize="14"  class="input"></Label>
-        <TextField ref="textField" @textChange="onInput" v-model="value" :secure="secure" row="1"  @focus="onFocus" @blur="onBlur" borderBottomWidth="3" borderBottomColor="#cec8c8" padding="2"></TextField>
+        <Label ref="label" row="1" :text="hint" opacity="0.4" fontSize="14"  class="input"></Label>
+        <TextField ref="textField" @textChange="onInput" v-model="value" :secure="secure" :keyboardType="keyboardType" row="1"  @focus="onFocus" @blur="onBlur" borderBottomWidth="3" borderBottomColor="#cec8c8" padding="2"></TextField>
     </GridLayout>
 </template>
 
@@ -10,7 +10,7 @@ import Vue from "vue";
 import { Color } from "tns-core-modules/color";
 
 export default Vue.extend({
-  props: ["value", "placeholder", "secure"],
+  props: ["value", "hint", "secure", "keyboardType"],
   data() {
     return {
       value: this.value
